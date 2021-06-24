@@ -1,0 +1,46 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <title>My Family Book</title>
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <img src="WhatsApp Image 2021-06-24 at 2.26.52 PM" id="family_member_image">
+        <p id="name_of_members">My Family</p>
+        <button id="next_button" type="button" onclick="update()">Next</button>
+    </body>
+</html>
+
+<script>
+    var images = [
+    "family.jpeg",
+    "komal kom.jpeg",
+    "father.jpeg",
+    "brother.jpeg",
+    "mother.jpeg"
+    ];
+
+    var names= [
+    "My Family",
+    "Komal Tripathy",
+    "Satyabrata Tripathy",
+    "Somansh Tripathy",
+    "Tejaswini Tripathy"
+    ];
+
+     var i = 0;
+     function update() 
+     {
+         i++;
+         var no_of_family_members = 4;
+         if(i > no_of_family_members)
+         {
+             i = 0;
+         }
+         var updated_image = images[i];
+         var updated_name = names[i];
+         document.getElementById("family_member_image").src = updated_image;
+         document.getElementById("name_of_members").innerHTML = updated_name;
+     }
+
+</script>
